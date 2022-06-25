@@ -5,7 +5,7 @@ export default function App() {
 
 let str1Value = "";
 let str2Value = "";
-const [dis,setDis] = useState("No Flames");
+const [dis,setDis] = useState("");
 
 function str1Fun (e){
  str1Value =  e.target.value;
@@ -70,7 +70,7 @@ function mergeInput(f,l) {
 
 }
 
-const flames = ["Siblings","Siblings","Love","Affection","Marriage","Enemy"];
+const flames = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
 function calculate () {
   const FinalResult = mergeInput(str1Value.toLowerCase(),str2Value.toLowerCase());
   setDis(flames[FinalResult]); 
@@ -80,8 +80,8 @@ function calculate () {
     <div id="main">
     <h3 data-testid="answer">{dis}</h3>
     <div className="input">
-    <input data-testid="input1"  onChange={str1Fun}/>
-   <input data-testid="input2" onChange={str2Fun}/>
+    <input data-testid="input1" required onChange={str1Fun}/>
+   <input data-testid="input2" required onChange={str2Fun}/>
     </div>
   
    <div className="buttons">
