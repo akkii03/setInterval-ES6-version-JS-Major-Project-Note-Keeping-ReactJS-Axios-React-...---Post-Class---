@@ -22,6 +22,8 @@ function calculate () {
 
 function clear (e) {
   setDis("");
+  document.getElementById("int1").value ="";
+  document.getElementById("int2").value ="";
 }
 
 function mergeInput(f,l) {
@@ -74,17 +76,15 @@ const flames = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
 function calculate () {
  
     const FinalResult = mergeInput(str1Value.toLowerCase(),str2Value.toLowerCase());
-    setDis(flames[FinalResult]); 
-  
-  
+    setDis(flames[FinalResult]);
 }
 
   return (
     <div id="main">
     <h3 data-testid="answer">{dis}</h3>
     <div className="input">
-    <input data-testid="input1" required onChange={str1Fun}/>
-   <input data-testid="input2" required onChange={str2Fun}/>
+    <input data-testid="input1" id="int1" required onChange={str1Fun}/>
+    <input data-testid="input2" id="int2" required onChange={str2Fun}/>
     </div>
   
    <div className="buttons">
