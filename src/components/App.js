@@ -75,8 +75,12 @@ function mergeInput(f,l) {
 const flames = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
 function calculate () {
  
-    const FinalResult = mergeInput(str1Value.toLowerCase(),str2Value.toLowerCase());
-    setDis(flames[FinalResult]);
+    if(str1Value.length===0 && str2Value.length===0) {
+      return;
+    }
+     const FinalResult = mergeInput(str1Value.toLowerCase(),str2Value.toLowerCase());
+    setDis(flames[FinalResult]); 
+  
 }
 
   return (
