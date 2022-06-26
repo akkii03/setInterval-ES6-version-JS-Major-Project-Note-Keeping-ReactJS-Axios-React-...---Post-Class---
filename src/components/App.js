@@ -77,9 +77,13 @@ function calculate () {
  
     if(str1Value.length===0 && str2Value.length===0) {
       return;
-    }
-     const FinalResult = mergeInput(str1Value.toLowerCase(),str2Value.toLowerCase());
-    setDis(flames[FinalResult]); 
+    } 
+     
+      else{
+        const FinalResult = mergeInput(str1Value.toLowerCase(),str2Value.toLowerCase());
+        setDis(flames[FinalResult]); 
+     }
+     
   
 }
 
