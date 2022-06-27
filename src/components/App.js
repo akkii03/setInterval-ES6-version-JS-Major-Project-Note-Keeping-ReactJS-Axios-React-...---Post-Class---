@@ -3,16 +3,17 @@ import '../styles/App.css';
 
 export default function App() {
 
-let str1Value = "";
-let str2Value = "";
+const [str1Value,setVal1] = useState("");
+const [str2Value,setVal2] = useState("");
+ 
 const [dis,setDis] = useState("");
 
 function str1Fun (e){
- str1Value =  e.target.value;
+setVal1(e.target.value);
 }
 
 function str2Fun (e){
-  str2Value =  e.target.value;
+  setVal2(e.target.value);
 }
 
 function calculate () {
