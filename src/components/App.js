@@ -76,8 +76,8 @@ function mergeInput(f,l) {
 const flames = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
 function calculate () {
  
-    if(str1Value.length===0 && str2Value.length===0) {
-      return;
+    if(str1Value.length===0 || str2Value.length===0) {
+      setDis("Please Enter valid input");
     } 
      
       else{
